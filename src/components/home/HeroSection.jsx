@@ -95,6 +95,9 @@ export default function HeroSection({ onOpenOrder, onDiscoverProduct }) {
           padding-top: 40px;
           padding-bottom: 50px;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         @media (min-width: 992px) {
@@ -179,7 +182,7 @@ export default function HeroSection({ onOpenOrder, onDiscoverProduct }) {
           text-align: center;
           gap: 6px;
           flex: 1;
-          min-width: 90px;
+          min-width: 0;
         }
 
         .hero-feature-label {

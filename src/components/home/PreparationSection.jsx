@@ -53,11 +53,17 @@ export default function PreparationSection() {
           padding: 64px 0 60px;
           color: #FFF9ED;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         .prep-container {
           position: relative;
           z-index: 2;
+          width: 100%;
+          max-width: var(--container-max);
+          box-sizing: border-box;
         }
 
         .prep-header {

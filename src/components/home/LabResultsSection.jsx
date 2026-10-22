@@ -341,6 +341,12 @@ export default function LabResultsSection() {
           right: 0;
         }
 
+        @media (max-width: 600px) {
+          .lab-leaf-decor {
+            display: none;
+          }
+        }
+
         .lab-header {
           text-align: center;
           margin-bottom: 36px;

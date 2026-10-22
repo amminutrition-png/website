@@ -196,6 +196,10 @@ export default function ProductSection({ quantity, setQuantity, onBuyNow, onOpen
           background: linear-gradient(180deg, #FFF9ED 0%, #FAF3E4 100%);
           padding-top: 50px;
           padding-bottom: 50px;
+          overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         .product-layout-grid {
@@ -203,6 +207,9 @@ export default function ProductSection({ quantity, setQuantity, onBuyNow, onOpen
           flex-direction: column;
           gap: 28px;
           align-items: center;
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
         }
 
         @media (min-width: 900px) {

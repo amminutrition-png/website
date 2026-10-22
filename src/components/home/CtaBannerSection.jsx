@@ -44,6 +44,10 @@ export default function CtaBannerSection({ onOpenOrder }) {
         .cta-banner-section {
           background-color: var(--color-warm-ivory);
           padding: 30px 0 60px;
+          overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         .cta-banner-card {
@@ -57,6 +61,9 @@ export default function CtaBannerSection({ onOpenOrder }) {
           box-shadow: 0 16px 40px rgba(6, 76, 45, 0.25);
           position: relative;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           border: 1px solid rgba(212, 163, 65, 0.3);
         }
 

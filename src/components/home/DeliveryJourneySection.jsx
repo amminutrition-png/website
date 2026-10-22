@@ -65,6 +65,9 @@ export default function DeliveryJourneySection() {
           background: linear-gradient(180deg, #EFF4DB 0%, #E6EFCB 100%);
           padding: 64px 0 60px;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         .factory-leaf-left {
@@ -81,6 +84,13 @@ export default function DeliveryJourneySection() {
           right: 10px;
           opacity: 0.7;
           pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+          .factory-leaf-left,
+          .factory-leaf-right {
+            display: none;
+          }
         }
 
         .factory-container {

@@ -395,12 +395,15 @@ export default function Header({ currentPath, onNavigate, onOpenOrder }) {
           -webkit-backdrop-filter: blur(6px);
           z-index: 200;
           opacity: 0;
+          visibility: hidden;
+          overflow: hidden;
           pointer-events: none;
-          transition: opacity var(--transition-normal);
+          transition: opacity var(--transition-normal), visibility var(--transition-normal);
         }
 
         .mobile-nav-drawer.drawer-open {
           opacity: 1;
+          visibility: visible;
           pointer-events: auto;
         }
 

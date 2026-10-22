@@ -57,6 +57,9 @@ export default function PromiseSection() {
           background: linear-gradient(180deg, #FFF9ED 0%, #FFF3DD 100%);
           padding: 56px 0;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           border-bottom: 1px solid var(--color-border-subtle);
         }
 
@@ -74,6 +77,13 @@ export default function PromiseSection() {
           right: 10px;
           opacity: 0.65;
           pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+          .promise-leaf-left,
+          .promise-leaf-right {
+            display: none;
+          }
         }
 
         .promise-container {
@@ -116,8 +126,14 @@ export default function PromiseSection() {
           text-align: center;
           gap: 12px;
           flex: 1;
-          min-width: 110px;
+          min-width: 0;
           transition: transform var(--transition-fast);
+        }
+
+        @media (min-width: 860px) {
+          .promise-item {
+            min-width: 100px;
+          }
         }
 
         .promise-item:hover {

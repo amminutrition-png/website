@@ -45,6 +45,9 @@ export default function GoodnessScoopSection() {
           background-color: var(--color-sage-green);
           padding: 44px 0;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           border-top: 1px solid rgba(212, 163, 65, 0.25);
           border-bottom: 1px solid rgba(212, 163, 65, 0.25);
         }
@@ -65,6 +68,13 @@ export default function GoodnessScoopSection() {
           transform: translateY(-50%);
           opacity: 0.75;
           pointer-events: none;
+        }
+
+        @media (max-width: 600px) {
+          .goodness-leaf-left,
+          .goodness-leaf-right {
+            display: none;
+          }
         }
 
         .goodness-container {

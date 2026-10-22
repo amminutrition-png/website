@@ -71,6 +71,10 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -79,7 +83,29 @@ body {
   background-color: var(--color-warm-ivory);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
+  position: relative;
+}
+
+#root, .app-root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+main, section, header, footer {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.home-page-main, .about-page-main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Headings */

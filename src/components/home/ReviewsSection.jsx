@@ -190,6 +190,9 @@ export default function ReviewsSection() {
           display: flex;
           align-items: center;
           justify-content: center;
+          width: 100%;
+          max-width: 100%;
+          overflow: hidden;
         }
 
         /* Desktop Arrow Buttons */

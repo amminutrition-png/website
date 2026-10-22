@@ -202,6 +202,9 @@ export default function Footer({ onNavigate, onOpenPolicy }) {
           padding-top: 56px;
           padding-bottom: 32px;
           overflow: hidden;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
 
         .footer-top-border {
@@ -231,6 +234,13 @@ export default function Footer({ onNavigate, onOpenPolicy }) {
           right: -10px;
           pointer-events: none;
           opacity: 0.6;
+        }
+
+        @media (max-width: 600px) {
+          .footer-leaf-left,
+          .footer-leaf-right {
+            display: none;
+          }
         }
 
         .footer-grid {
