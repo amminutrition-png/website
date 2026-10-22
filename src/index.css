@@ -1,0 +1,394 @@
+/* ==========================================================================
+   AMMI NUTRITION — MASTER DESIGN SYSTEM & GLOBAL CSS
+   Brand: Ammi Nutrition — Daily Nutrition for Happy Family
+   ========================================================================== */
+
+:root {
+  /* Brand Color Tokens */
+  --color-forest-green: #064C2D;
+  --color-deep-green: #073D25;
+  --color-dark-green-hover: #042D1B;
+  --color-green-tint: rgba(6, 76, 45, 0.08);
+  
+  --color-warm-ivory: #FFF9ED;
+  --color-warm-ivory-alt: #FFF8E9;
+  --color-soft-cream: #F7EEDB;
+  --color-cream-card: #FFFDF8;
+  --color-sage-green: #EAF1CF;
+  --color-sage-light: #F2F6E3;
+  
+  --color-natural-gold: #D4A341;
+  --color-gold-light: #E8C87A;
+  --color-gold-tint: rgba(212, 163, 65, 0.12);
+  --color-gold-border: rgba(212, 163, 65, 0.38);
+  --color-star-gold: #F59A00;
+  
+  --color-prep-dark: #4A230F;
+  --color-prep-rich: #603014;
+  --color-wood-brown: #7A4825;
+  
+  --color-body-charcoal: #262820;
+  --color-body-muted: #5E6258;
+  --color-border-subtle: #E8DFCB;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 8px rgba(6, 76, 45, 0.04);
+  --shadow-md: 0 6px 20px rgba(6, 76, 45, 0.07);
+  --shadow-lg: 0 14px 34px rgba(6, 76, 45, 0.12);
+  --shadow-modal: 0 24px 60px rgba(7, 61, 37, 0.22);
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 180ms ease;
+  --transition-normal: 260ms ease;
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-body-charcoal);
+  background-color: var(--color-warm-ivory);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-forest-green);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--color-body-charcoal);
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Decorative Gold Accent Lines */
+.gold-divider {
+  width: 56px;
+  height: 2px;
+  background-color: var(--color-natural-gold);
+  margin: 12px 0 16px;
+  border-radius: 2px;
+}
+
+.gold-divider-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Header Typography Helpers */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-forest-green);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-body-muted);
+  text-align: center;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .section-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+/* Button Variants */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-forest-green);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(6, 76, 45, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-green-hover);
+  box-shadow: 0 6px 20px rgba(6, 76, 45, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-forest-green);
+  padding: 10px 16px;
+  border-bottom: 2px solid var(--color-natural-gold);
+  border-radius: 0;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  color: var(--color-deep-green);
+  border-color: var(--color-forest-green);
+}
+
+.btn-gold {
+  background-color: var(--color-soft-cream);
+  color: var(--color-forest-green);
+  border: 1px solid var(--color-natural-gold);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(212, 163, 65, 0.2);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-warm-ivory);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(212, 163, 65, 0.3);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 14px 28px;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+}
+
+.btn-whatsapp:hover {
+  background-color: #20BD5A;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.36);
+  transform: translateY(-1px);
+}
+
+/* Feature Badge/Circle */
+.feature-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-natural-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  color: var(--color-forest-green);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  margin-bottom: 8px;
+}
+
+.feature-circle-green {
+  border-color: var(--color-forest-green);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* Quantity Selector Component */
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  user-select: none;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--color-forest-green);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.qty-btn:hover:not(:disabled) {
+  background-color: var(--color-soft-cream);
+}
+
+.qty-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.qty-val {
+  min-width: 44px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-forest-green);
+}
+
+/* Card Styling */
+.card-ivory {
+  background-color: var(--color-cream-card);
+  border: 1.5px solid var(--color-gold-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-ivory:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Mobile-First Navigation & Modal Overlay helpers */
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(7, 61, 37, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Touch friendly mobile optimizations */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .btn {
+    min-height: 46px;
+  }
+  
+  .qty-btn {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .qty-val {
+    min-width: 50px;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .btn, .overlay-backdrop {
+    display: none !important;
+  }
+}
